@@ -5,9 +5,10 @@ tar -zxvf NPB3.3.1.tar.gz
 ln -s NPB3.3.1 npb
 cp make.def npb/NPB3.3-OMP/config/
 
-wget http://software.intel.com/sites/landingpage/pintool/downloads/pin-3.0-76991-gcc-linux.tar.gz
-tar -zxvf pin-3.0-76991-gcc-linux.tar.gz
-ln -s pin-3.0-76991-gcc-linux.tar.gz pin
+pin_version=2.14-71313-gcc.4.4.7-linux
+wget http://software.intel.com/sites/landingpage/pintool/downloads/pin-${pin_version}.tar.gz
+tar -zxvf pin-${pin_version}.tar.gz
+ln -s pin-${pin_version} pin
 
 git clone https://github.com/eugenechereshnev/bin-inst.git
 
